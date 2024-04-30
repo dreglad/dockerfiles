@@ -7,7 +7,7 @@ WORKDIR /app/refine
 
 FROM base AS deps
 
-COPY package*.json yarn.lock pnpm-lock.yaml .npmrc ./
+COPY package*.json yarn.lock* pnpm-lock.yaml* .npmrc* ./
 
 RUN \
   if [ -f yarn.lock ]; then yarn --frozen-lockfile; \
